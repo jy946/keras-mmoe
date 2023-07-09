@@ -99,7 +99,7 @@ class MMoE(Layer):
         self.activity_regularizer = regularizers.get(activity_regularizer)
 
         # Keras parameter
-        self.input_spec = InputSpec(min_ndim=2)
+        self.input_spec = InputSpec(min_ndim=2) #输入的最小rank
         self.supports_masking = True
 
         super(MMoE, self).__init__(**kwargs)
